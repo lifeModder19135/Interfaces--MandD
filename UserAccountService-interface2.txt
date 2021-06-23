@@ -1,0 +1,40 @@
+public interface UserAccountService
+
+//'get-list' methods
+
+    List<int> getAllUserIds() {};
+
+    List<int> getAllAccountIds() {};
+
+    List<int> getAccountIdsForUserWithId(int userId) {};
+    
+    List<int> getUsernamesForUserWithId(int userId) {};
+
+    List<Account> getAccountsForUserWithId(int userId) {};
+
+//'get-id' methods
+
+    List<int> getAccountIdForUsername(String username) {};
+
+//'get User or Account object' methods
+
+    Account getAccountByAccountId(int acctId) {};
+
+    Account getAccountByUsername(int acctId) {};
+
+    User getUserByUserId(int userId) {};
+
+    User getUserByEmailAddress(EmailAddress userEmailAddress) {};  //For email-per-user scenario
+
+    User getAccountByEmailAddress(EmailAddress accountEmailAddress) {};  //For email-per-account scenario
+
+//'get child of User / Account' methods
+
+    AccountProfile getAccountProfileDataForAccountwithId(int accountId) {};
+
+    AccountPreferences getAccountPreferencesForAccountwithId(int accountId) {};
+
+    AccountMetrics getAccountMetricsForAccountwithId(int accountId) {};
+
+    UserDetails getUserDetailsforUserWithId(int userId) {};
+
